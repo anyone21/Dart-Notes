@@ -63,6 +63,6 @@
          ```
          
 ### Ending Note
-This is a basic overview about null in dart. In next part we try to demystiy how dart .
+This is a basic overview about null in dart. In next part we try to demystify how dart .
          
                                                
