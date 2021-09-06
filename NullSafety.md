@@ -1,4 +1,4 @@
-# NULLABILITY - Should we need it or not?
+# NULLABILITY in Dart - Introduction[Part-1]
 
 ### What is the meaning of null?
    Null plays a crucial role in programming languages. Null means "no value" or "absence of a value". Consider an example, a user store its Email-id in a String.
@@ -59,8 +59,10 @@
            String? nullString = null;    // This means that nullString variable can either contain a String Or it can be null.
          }
          
-         Note: For any nullable variable in Dart, if you don’t initialize it with a value, it’ll be given the default value of null.
+         // Note: For any nullable variable in Dart, if you don’t initialize it with a value, it’ll be given the default value of null.
          ```
          
+### Ending Note
+This is a basic overview about null in dart. In next part we try to demystiy how dart .
          
-      
+                                               
