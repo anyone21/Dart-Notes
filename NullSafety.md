@@ -1,8 +1,5 @@
 # NULLABILITY - Should we need it or not?
-### Technical jargons realated to null
-* null
-* sound null safety
-* 
+
 ### What is the meaning of null?
    Null plays a crucial role in programming languages. Null means "no value" or "absence of a value". Consider an example, a user store its Email-id in a String.
    ```dart
@@ -29,4 +26,41 @@
    little ticking bombs ready to explode the code. If we discard null string from our code then and continue using empty string then our problem gets solved 
    but wait? Isn't null useful?
    
+### How dart tackle this problem of Null?
+   Starting with version 2.12, Dart separated its types into nullable and non-nullable. Nullable types end with a question mark (?) while non-nullable types do not.
+   More specifically, types of our code are non-nullable by default, meaning that values can't be null unless we say they can be.
    
+   * **Nullable and Non-nullable types**
+
+      * **Non-nullable types:**
+         
+         ```dart
+         // Types are non-nullable by default i.e, they guaranteed to never contain the value null.
+         // These types are easy to recognize because they don't have a question mark at the end 
+         
+         void main(List<String> args) {
+           int firstVar = 323;
+           double firstDouble = 2323.323;
+           bool firstBool = true;
+           String firstString = 'This is my String';
+           
+           int nullVar = null; //ERROR
+         }
+         ```
+       * **Nullable types:**
+
+         ```Dart
+         //This types can contain the null value in addition to its own data type.
+         
+         void main(List<String> args) {
+           int? nullInt = null;
+           double? nullDouble = null;
+           bool? nullBool = null;
+           String? nullString = null;    // This means that nullString variable can either contain a String Or it can be null.
+         }
+         
+         Note: For any nullable variable in Dart, if you don’t initialize it with a value, it’ll be given the default value of null.
+         ```
+         
+         
+      
