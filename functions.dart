@@ -32,6 +32,31 @@ void main() {
   people.forEach((p) => print(wonderful(p));
 }
 
-// Challenges
 
-                 
+// Challenges=1
+
+import 'dart:math';
+
+bool prime(int number) {
+  int count = 1;
+  if (number <= 1) {
+    return false;
+  }
+  for (int i = 2; i <= sqrt(number); i++) {
+    if (number % i == 0) {
+      count++;
+      break;
+    }
+  }
+  if (count >= 2) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+void main() {
+  print(prime(10));
+}
+
+//challenge 2
