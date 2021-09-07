@@ -60,3 +60,33 @@ void main() {
 }
 
 //challenge 2
+int repeatTask(int times, int input, Function task) {
+  while (times>0) {
+    input = task(input);
+    times--;
+  }
+  return input;
+}
+
+void main(List<String> args) {
+  final output = repeatTask(4, 2, (int a) {
+    return a * a;
+  });
+  print(output);
+}
+
+                 
+// challenge-3
+                 
+int repeatTask(int times, int input, Function task) {
+  while (times>0) {
+    input = task(input);
+    times--;
+  }
+  return input;
+}
+
+void main(List<String> args) {
+  final output = repeatTask(4, 2, (int a) => (a * a));
+  print(output);
+}
