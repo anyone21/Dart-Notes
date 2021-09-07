@@ -181,5 +181,33 @@ void main() {
 
 ```
 
+### Closures and scope
+The term closures means that the code "close around" the surrounding scope, and therefore has access to variables and functions defined within the scope.
+Consider following figure to understand about **scope.**
 
+![image](https://user-images.githubusercontent.com/32765126/132342068-e7bdd675-e952-4fac-941e-c1efd82e5c9b.png)
 
+A scope in Dart is defined by a pair of curly braces. All the code within these braces is a scope. We can even have nested scopes within other scopes.
+
+For example:
+```dart
+Function countingFunction() {
+  var counter = 0;
+  final incrementCounter = () {
+    counter += 1;
+    return counter;
+   };
+  return incrementCounter;
+}
+
+void main(){
+  final counter1 = countingFunction();
+  final counter2 = countingFunction();
+  
+  print(counter1()); // 1
+  print(counter2()); // 1
+  print(counter1()); // 2
+  print(counter1()); // 3
+  print(counter2()); // 2
+}
+```
