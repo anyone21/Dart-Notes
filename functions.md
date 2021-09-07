@@ -1,4 +1,4 @@
-# classes and functions
+# Functions
 
 ## Technical Jargon
 * Function
@@ -211,3 +211,25 @@ void main(){
   print(counter2()); // 2
 }
 ```
+
+
+### Arrow function
+These functions are implemented on those functions having body of one line.For example, we can write function of multiplying two numbers in one line. Syntax of arrow
+functions.
+
+> (parameters) => expression;
+
+```dart
+int multiplyTwo(int a,int b){
+  return a*b;
+}
+```
+
+This also can be written as:
+
+```dart
+int multiplyTwo(int a,int b) => a*b;
+```
+
+We replaced the functions braces and body with an arrow(=>) and left off the return keyword. The return value is whatever the value of the expression is. Writing a function in this way is known as arrow syntax or arrow notation.
+
