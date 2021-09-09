@@ -15,3 +15,22 @@ void main(List<String> args) {
 }
 
 
+//MinEx -2
+//1
+void main(List<String> args) {
+  const myAge = 24;
+  if (myAge >= 13 && myAge <= 19) {
+    print('Teenager');
+  } else {
+    print('Not a teenager');
+  }
+}
+
+//2
+void main(List<String> args) {
+  const myAge = 24;
+  const answer = (myAge >= 13 && myAge <= 19) ? 'Teenager' : 'Not a teenager';
+  print(answer);
+}
+
+
