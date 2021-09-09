@@ -19,7 +19,7 @@
  
  
  ## Boolean logic
- * AND operator  : When two conditions need to be true in order for the result to be true.
+ * AND operator : When two conditions need to be true in order for the result to be true.
  ```dart
  void main(){
   const varOne = true;
@@ -34,6 +34,31 @@
 | false| false | false |
 | false| true | false |
 
- 
+* OR operator : If only one of two conditions need to be true in order for the result to be true, this is an example of a Boolean OR operation.
+```dart
+void main(){
+ const varOne = true;
+ const varTwo = false;
+ print(varOne || varTwo); //true
+}
+```
+
+|   A  |  B  |  A \|\| B  |
+|------|-----|----------|
+| true| false | true |
+| true| true | true |
+| false| false | false |
+| false| true | true |
+
+
+* Operator precedence: Operators higher in the following list are executed before operators lower in the following list.
+
+| ! |
+|----|
+| >= > <= < |
+| == != |
+| && |
+| \|\| |
+
  
  
