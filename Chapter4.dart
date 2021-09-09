@@ -53,3 +53,22 @@ void main(List<String> args) {
       print('Nothing happen');
   }
 }
+
+
+// challenge-1
+const firstName = 'Bob';
+if (firstName == 'Bob') {
+  const lastName = 'Smith';  
+} else if (firstName == 'Ray') {
+  const lastName = 'Wenderlich';
+}
+final fullName = firstName + ' ' + lastName;  // lastName is undefined ERROR
+// lastName is defined inside if and else block. So it give error on last line 
+
+// challenge-2
+true && true    ----------------    true
+false || false  ----------------     false 
+(true && 1 != 2) || (4 > 3 && 100 < 1)  -----------   true
+((10 / 2) > 3) && ((10 % 2) == 0) ------------  true
+  
+// challenge -3
