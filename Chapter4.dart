@@ -72,3 +72,45 @@ false || false  ----------------     false
 ((10 / 2) > 3) && ((10 % 2) == 0) ------------  true
   
 // challenge -3
+// Challenge 3: Next power of two
+// Given a number, determine the next power of
+// two above or equal to that number. Powers of
+// two are the numbers in the sequence of 2¹, 2²,
+// 2³, and so on. You may also recognize the series
+// as 1, 2, 4, 8, 16, 32, 64...
+  
+  
+//challenge-4
+int fibnacci(int n) {
+  if (n == 0 || n == 1) {
+    return 1;
+  }
+  return fibnacci(n - 1) + fibnacci(n - 2);
+}
+
+void main() {
+  int n = 5;
+  print(fibnacci(n));
+}
+
+
+//challenge-5
+var sum = 0;
+for (var i = 0; i <= 5; i++) {
+    sum += i;
+} 
+// number of iterations : 6
+// sum = 15
+
+// challeng-6
+for(int i=10;i>=0;i--){
+  print(i);
+}
+
+
+//challenge-7
+void main() {
+  for (double i = 0.0; i <= 1; i += 0.1) {
+    print(i.toStringAsFixed(1));
+  }
+}
