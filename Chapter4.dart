@@ -34,3 +34,22 @@ void main(List<String> args) {
 }
 
 
+// Mini-exercise 3
+enum AudioState { playing, paused, stopped }
+
+void main(List<String> args) {
+  const audioState = AudioState.stopped;
+  switch (audioState) {
+    case AudioState.playing:
+      print("Audio is playing");
+      break;
+    case AudioState.paused:
+      print("Audio is paused");
+      break;
+    case AudioState.stopped:
+      print("Audio is stopped");
+      break;
+    default:
+      print('Nothing happen');
+  }
+}
