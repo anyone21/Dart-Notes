@@ -2,6 +2,15 @@
 * control flow
 * boolena values
 * boolean operator
+* scope
+* if -else loop
+* switch statement
+* enum
+* while loop
+* do-while loop
+* for-loop
+* break, continue keyword
+* For-each loop
 
 
 ## Boolean values:
@@ -61,4 +70,71 @@ void main(){
 | \|\| |
 
  
- 
+## Scope
+Scope is the extent to which a variable can be seen throughout your code. Dart uses curly braces as the boundary markers in determining a variable's scope.For example:
+```dart
+const global = 'Hello, world';
+void main() {
+ const local = 'Hello, main';
+ if (2 > 1) {
+  const insideIf = 'Hello, anybody?';
+  print(global);
+  print(local);
+  print(insideIf);
+ }
+ print(global);
+ print(local);
+ print(insideIf); // Not allowed!
+}
+
+
+// global variable is deined outside main, which means it has a global scope. That is, it's visible everywhere in the file.
+// local variable is defined inside main, which means it can be accessible form everywhere inside main function.
+// insideIf variable is defined inside the body of if statement, which means it can't be access outside this if statement.
+```
+
+## Loops
+* if-else loop
+```dart
+void main(){
+ if(condition is true){
+  //body
+ }else {
+  body
+ }
+```
+
+* while-loop
+```dart
+ void main(){
+  while(condition){
+    // lopp code
+  }
+```
+* do-while loop
+```dart
+void main(){
+ do{
+   //loop code
+ }while(condition)
+```
+
+* for loop
+```dart
+void main(){
+ for(initalization, condition, action){
+     // Loop body
+ }
+```
+
+* For-each loop
+```dart
+void main(){
+   const data = [1,2,3,45];
+   data.forEach((d) => print(d));
+   // 1 2 3 45
+}
+```
+
+
+
