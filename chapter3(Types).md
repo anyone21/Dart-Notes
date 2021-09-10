@@ -87,4 +87,45 @@ void main(){
 The runtime type of someNumber is int, not double. In Dart, we’re not allowed to cast to a sibling type, such as int to double. we can only cast down to a subtype.
  
 
-## 
+## Optionally typed
+
+Programming languages are either dynamic-typed or static-typed in nature. For a dynamically typed langauage types can change at runtime. For example:
+```dart
+void main() {
+ var myVar = 32;
+ myVar = 'Hello';  //Showing dynamic nature
+ 
+ var result = myVar*3; // is not possible practically for Strings
+}
+```
+But to prevent above mistakes in dart it have a solution by providing **optionally-typed langauage.** That means you can choose to use Dart as a dynamically typed language or as a staticallytyped language. Static means that something cannot change; once you tell Dart what type a variable is, you’re not allowed to change it
+anymore.
+
+```dart 
+void main(){
+ var myVariable = 42;
+ myVariable = 'hello'; // compile-time error
+}
+```
+
+The Dart compiler will immediately tell us that it’s an error. That makes type errors trivial to detect. The creators of Dart did include a **dynamic** type for those who wish write their programs in a dynamically-typed way.
+```dart
+void main(){
+ dynamic myVariable = 42;
+ myVariable = 'hello'; // OK
+}
+```
+
+In fact, this is the default if you use var and don’t initialize your variable:
+```dart
+var myVariable; // defaults to dynamic
+myVariable = 42; // OK
+myVariable = 'hello'; // OK
+```
+
+If you need to explicitly say that any type is allowed, you should consider using the Object? type.
+```dart
+Object? myVariable = 42;
+myVariable = 'hello'; // OK
+```
+
