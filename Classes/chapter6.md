@@ -6,6 +6,7 @@
 * Object serialization
 * Cascade notation
 * Constructor
+* this Keyword
 
 We can create our own custom types using **classes.** Classes are like architectural blueprints that tell the system how to make an **object,** where an object is the actual data that’s stored in the computer’s memory. If a class is the blueprint, then you could say the object is like the house that the blueprint represents.
 
@@ -73,6 +74,60 @@ final user = User()
 
 
 ## Constructors
-Constructors are methods that create, or construct, instances of a class. That is to say, constructors build new objects. Constructors have the same name as the class, and the implicit return type of the constructor method is also the same type as the class itself.
+Constructors are methods that create, or construct, instances of a class. That is to say, constructors build new objects. Constructors have the same name as the class, and the implicit return type of the constructor method is also the same type as the class itself. There are different type of constructors:
+
+1. default constructor
+2. Custom constructor
+3. Long-form constructor
+4. Short-form constructor
+5. Named constructor
+6. Forwarding constructor
+7.  Constant constructors
+8.  Factory constructors
+
+### Default constructor
+This constructor takes no parameters and just returns an instance of the class.
+```dart
+class Data{
+  var value ='';
+}
+
+// Is equivalent to writing it like his
+class Data{
+  Data();   //constructor with no parameters
+  var value ='';
+}
+```
+
+### Custom constructor
+This constructor take the parameter to modify the how our class builds an object. 
+
+### Long-form constructor
+In Dart the convention is to put the constructor before the property variables.
+```Dart
+class User{
+  User(int id, String name){
+    this.id = id;
+    this.name = name;
+  }
+  
+  int id =  0;
+  String name = '';
+}
+```
+
+> The keyword **this** in the constructor body allows us to diambiguate which variable we are talking about. It means this object. So this.name refers the object property called name, while name(without this) refers to the constructor parameter. Using the same name for the constructor parameters as the class properties is called **shadowing**. 
 
 
+### Short-form constructor
+Long form constructor can be written in short-form are as follows:
+```dart
+class User {
+  User(this.id, this.name);
+  
+  int id = 0;
+  String name = '';
+}
+```
+
+### Named constructor
