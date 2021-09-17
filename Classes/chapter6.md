@@ -7,6 +7,7 @@
 * Cascade notation
 * Constructor
 * this Keyword
+* Private variables
 
 We can create our own custom types using **classes.** Classes are like architectural blueprints that tell the system how to make an **object,** where an object is the actual data that’s stored in the computer’s memory. If a class is the blueprint, then you could say the object is like the house that the blueprint represents.
 
@@ -82,8 +83,8 @@ Constructors are methods that create, or construct, instances of a class. That i
 4. Short-form constructor
 5. Named constructor
 6. Forwarding constructor
-7.  Constant constructors
-8.  Factory constructors
+7. Constant constructors
+8. Factory constructors
 
 ### Default constructor
 This constructor takes no parameters and just returns an instance of the class.
@@ -131,3 +132,79 @@ class User {
 ```
 
 ### Named constructor
+We can create by adding an identifier on to the class name. it takes the following pattern:
+> className.identifierName()
+
+```dart
+User.anonymous() {
+  id = 0;
+  name = 'anonymous';
+}
+
+final anonymousUser = User.anonymous();
+print(anonymousUser)
+```
+
+### Intitilizer lists
+Take a look at the following way that an unscrupuous person could use this class:
+```Dart
+final vicki = User(id : 24, name: 'Ujjwal');
+vicki.name = 'Hey I am a Hacker!!';
+print(vicki);    // User(id: 24, name: Hey I am a Hacker)
+```
+
+> We want is once we have created the user object, we do'nt want anyone to mess with it.
+There are multiple solution for this problem like one is discussed are as follows:
+
+### Private variables
+Dart allows you to make variables private by adding an underscore (_) in front of their name.
+
+```dart 
+User({int id = 0, String name = 'anonymous'})
+  : _id = id,
+  _name = name {
+    print(' User name is $_name');
+}
+```
+
+> Note: The member variables of a class are generally called fields. However, when the fields are public, that is, when they’re visible to the outside world, you can also call them properties. The Getters and Setters sections below will show you how to use public properties and private fields at the same time.
+
+### Why aren’t the private properties private?
+It turns out that your nefarious hacker can still access the “private” fields of User. Add the following two lines to main to see this in action:
+
+```
+final vicki = User(id: 24, name: 'Vicki');
+vicki._name = 'Nefarious Hacker';
+```
+
+Using an underscore before a variable or method name makes it **library private,** not **class private.** For our purposes a library is simply a file, Since the main function and the User class are in the same file, nothing in User is hidden from main. To see private variables in action we will need to make another file so that we are not sing our class in the same file in which it is defined.
+
+
+### checking for errors
+Initializer lists are a great place to check for errors in the constructor parameters, which you can do by adding assert statements.
+
+An assert statement takes a condition, and if the condition is false, terminates the app. This compiler completely ignores assert statments iin relase builds. 
+
+```dart
+user({int id = 0, String name = 'anonymous'})
+  : assert(id >= 0),
+  : assert(name.isNotEmpty),
+  _id = id,
+  _name = name;
+```
+
+### Constant constructors
+We have learned how to keep epole from modifying the properties of a class by making them private. Another thing we can do is to make the properties immutable, that is, unchangeable. By using immutable properties, we don't even have to make them private. 
+
+* Making properties immutable : There are two ways to make a variable immutable in dart: final and const. However, since the compiler won't know what the properties are until runtime, we only choice here is to use final.
+
+```dart
+final int _id;
+final String _name;
+```
+
+Adding final means that _name and _id can only be given a value once, that is, when the constructor is called. After the object has been created, those properties will be immutable. You should keep the String and int type annotations, because removing them would cause the compiler to fall back to **dynamic**.
+
+
+... to be continued
+
