@@ -2,10 +2,10 @@
 * Classes
 * Objects
 * Methods
-* Constructor
 * Instance
 * Object serialization
 * Cascade notation
+* Constructor
 
 We can create our own custom types using **classes.** Classes are like architectural blueprints that tell the system how to make an **object,** where an object is the actual data that’s stored in the computer’s memory. If a class is the blueprint, then you could say the object is like the house that the blueprint represents.
 
@@ -71,5 +71,8 @@ final user = User()
 // Semicolon only appears on the last line
 ```
 
+
+## Constructors
+Constructors are methods that create, or construct, instances of a class. That is to say, constructors build new objects. Constructors have the same name as the class, and the implicit return type of the constructor method is also the same type as the class itself.
 
 
