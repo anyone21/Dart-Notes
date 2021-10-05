@@ -1,0 +1,43 @@
+## Summary of Module-2
+* How a Flutter App Starts and Works.
+* Working with Widgets & Building Custom Widgets.
+* Reacting to User Events
+* Stateless and Stateful widgets
+* Dart Fundamentals
+
+## Data types:
+* A program works with different types of data
+	* Text 
+	* Numbers 
+		* Floats
+		* Integers
+
+
+Dart is a statically typed, object-oriented programming language developed by Google which can be used to build web and mobile application.
+
+| Statically typed | Object-oriented | Mobile application |
+|------------------|-----------------|--------------------|
+| We define which(types) of data a variable or function uses | Everything's an object We defien classes as blueprint for our own objects | Flutter uses dart as a programming langauge to build native mobile apps |
+
+```dart
+// Statically typed
+String myName;
+myName = 'Ujjwal';
+
+myname = 5; // Fials
+```
+
+```dart
+// Object-oriented
+Class Person{
+  String name = 'Max';
+}
+
+Person p = Person();
+print(p.name) //'Max'
+```
+
+
+
+> Function inside a class are called methods and variable inside a class are called properties.
+
