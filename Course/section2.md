@@ -41,3 +41,8 @@ print(p.name) //'Max'
 
 > Function inside a class are called methods and variable inside a class are called properties.
 
+
+1. [Decorator in dart](https://dart.academy/structural-design-patterns-for-dart-and-flutter-decorator/)
+2. 
+
+
