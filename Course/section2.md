@@ -43,6 +43,6 @@ print(p.name) //'Max'
 
 
 1. [Decorator in dart](https://dart.academy/structural-design-patterns-for-dart-and-flutter-decorator/)
-2. 
+
 
 
