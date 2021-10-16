@@ -45,4 +45,14 @@ print(p.name) //'Max'
 1. [Decorator in dart](https://dart.academy/structural-design-patterns-for-dart-and-flutter-decorator/)
 
 
+### Different type of Widgets
+1. Output & Input(Visible) Eg. RaisedButton, Text(), Card(),... Drawn onto the screen : "What the user sees".
+2. Layout and Control ( Invisible) Eg. Row(), Column(), ListView()...  Give our app structure and control how visible widgets are drawn onto the screen (indeirectly visible)
+3. Container() widget : This type of widget belong to both Visibe and Invisible type of widgets.
+
+![image](https://user-images.githubusercontent.com/32765126/137576162-d3241578-a5c8-4f0c-89ae-9897f35a8bd5.png)
+
+### Understanding "State" 
+
+
 
