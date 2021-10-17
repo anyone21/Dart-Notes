@@ -54,5 +54,6 @@ print(p.name) //'Max'
 
 ### Understanding "State" 
 
-
+* [video link](https://www.youtube.com/watch?v=QlwiL_yLh6E)
+* 
 
