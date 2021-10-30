@@ -54,3 +54,16 @@ StaticMem.disp();
 ```
 
 [Video Resource](https://www.youtube.com/watch?v=gmEVGdswpO0)
+
+
+### What is the difference between child: and children: property in Flutter?
+* child takes single widget
+``` dart
+child: Text('foo')
+```
+* children takes a list of widgets
+``` dart
+children: <Widget>[Text('foo'), Text('bar')]
+```
+
+
