@@ -12,4 +12,8 @@ One kind of **ViewGroup** is a **Constraintlayout**, which helps you arrange the
 * Layout Editor: Its a tools which helps us to make UI by arranging **Views** and **ViewGroups**.
 
 
-
+### Lesson -2
+* Introduction to Activities
+* Activity is basically a screen like Login in screen, Signup screen etc. An appication can have multiple activities.
+* The top-level or first activity is often called the MainActivity and is provided by the project template.
+* Using **When** statement in Kotlin
