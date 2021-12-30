@@ -27,4 +27,59 @@ fun main(){
 
 In the above script, syntactically the main difference between a nullable and non-nullable type in Kotlin can be differentiated on the basis of “?” after any type.
 
-### 
+### Erros while working with null
+
+```kotlin
+// script-1
+fun main(){
+  val a:Int = 32  //Non-nullable
+  var b:Int? = 322 // Nullable
+
+  a = b   //Error
+  println(a)
+  println(b)
+}
+
+ERROR:
+error: val cannot be reassigned
+  a = b
+  ^
+error: type mismatch: inferred type is Int? but Int was expected
+  a = b
+      ^
+exit status 1
+
+```
+
+```kotlin
+// script-2
+fun main(){
+  val a:String = "" //Non-nullable
+  var b:String? = null // Nullable    ERROR
+
+  println(a.length)
+  println(b.length)
+}
+
+ERROR:
+error: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
+  println(b.length)
+           ^
+exit status 1
+```
+<br>
+
+> In script-2 we can use "?." operator to safely call the Nullable-types.For example:
+
+
+```kotlin
+script-3
+fun main(){
+  val a:String = "" //Non-nullable
+  var b:String? = null // Nullable
+
+  println(a.length)     // 0
+  println(b?.length)    // null
+}
+```
+  
