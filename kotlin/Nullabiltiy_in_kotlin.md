@@ -39,7 +39,7 @@ fun main(){
   println(a)
   println(b)
 }
-
+/*
 ERROR:
 error: val cannot be reassigned
   a = b
@@ -49,7 +49,9 @@ error: type mismatch: inferred type is Int? but Int was expected
       ^
 exit status 1
 
+*/
 ```
+<br>
 
 ```kotlin
 // script-2
@@ -61,11 +63,13 @@ fun main(){
   println(b.length)
 }
 
+/*
 ERROR:
 error: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
   println(b.length)
            ^
 exit status 1
+*/
 ```
 <br>
 
@@ -73,7 +77,7 @@ exit status 1
 
 
 ```kotlin
-script-3
+// script-3
 fun main(){
   val a:String = "" //Non-nullable
   var b:String? = null // Nullable
@@ -81,5 +85,43 @@ fun main(){
   println(a.length)     // 0
   println(b?.length)    // null
 }
+
+// NOTE: If you work little bit in android then you see high usability of "?." nullable safe call operator.  
 ```
-  
+<br>
+
+```kotlin
+//script-4
+fun main(){
+  var result:Int? = 32
+  println(result)
+  println(result+1)   // ERROR
+}
+/*
+ERROR:
+error: operator call corresponds to a dot-qualified call 'result.plus(1)' which is not allowed on a nullable receiver 'result'.
+  println(result+1)
+                ^
+*/                
+```
+
+<br>
+<br>
+
+As we have seen above Nullable objects are like boxe. And if it contain the value then it should be taken out of the box. In a situtation if we want that value and try to add with a non-nullable variable then what we have to do? We can deal with such kind of situtations using **Not-null assertion operators**. For example:
+
+```kotlin
+//script-5
+fun main(){
+  val firstName:String? = "Ujjwal" //Nullable
+  val lastName:String? = " Bansal"  // Nullable
+
+  val fullName:String = firstName!! + lastName!! // Not-null assertion operator
+
+  println(fullName)
+}
+```
+> Note: The double-exclamation mark after the variable name tells the compiler that you want to look inside the box and take out the value. The result is a value of the nonnull type.
+
+<br>
+
