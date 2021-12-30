@@ -136,13 +136,34 @@ In the above case our Nullable varaible store some value but what we get if our 
 
   println(fullName)
 }
-
+/*
 ERROR:
 Exception in thread "main" kotlin.KotlinNullPointerException
+*/
 ```
 The null-pointer exception occurs because the variable contains no value when you try to use it. What’s worse is that you get this exception at runtime rather than
 compile time — which means you’d only notice the exception if you happened to execute this code with some invalid input. Worse yet, if this code were inside an app,
 the null-pointer exception would cause the app to crash!
 
 <br>
+As we seen in case of "**not-null assertion**" might cause a null-pointer excetion. Another way to deal with such exceptions we can use "**Smart casts**". Because they are much safer in case whenever nullable might be null. Not-null assertion is only appropriate when a nullable is guaranteed to contain a value.
+
+```kotlin
+//script-7
+fun main(){
+	var a:Int? = null
+    var nonNullableData:Int = 8
+    var nullableData:Int? = 66
+    
+    if(a!=null){
+        nonNullableData = a
+    }else{
+        nullableData = a
+    }
+    
+    println(nonNullableData)
+    println(nullableData)
+}
+```
+
 
