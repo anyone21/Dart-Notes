@@ -125,3 +125,24 @@ fun main(){
 
 <br>
 
+In the above case our Nullable varaible store some value but what we get if our box is empty.
+```kotlin
+//script-6
+ fun main(){
+  val firstName:String? = "Ujjwal" //Nullable
+  val lastName:String? = null  // Nullable   ERROR
+
+  val fullName:String = firstName!! + lastName!! // Not-null assertion operator
+
+  println(fullName)
+}
+
+ERROR:
+Exception in thread "main" kotlin.KotlinNullPointerException
+```
+The null-pointer exception occurs because the variable contains no value when you try to use it. What’s worse is that you get this exception at runtime rather than
+compile time — which means you’d only notice the exception if you happened to execute this code with some invalid input. Worse yet, if this code were inside an app,
+the null-pointer exception would cause the app to crash!
+
+<br>
+
