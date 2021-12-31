@@ -166,4 +166,45 @@ fun main(){
 }
 ```
 
+### Elvis operator
+
+This is also an another way to get a value from a nullable. It is used to return the not null value even the conditional expression is null. It is also used to check the null safety of values. consider following scripts to get a clear view of this operator.
+
+```kotlin
+// script-8
+// Part-1
+fun main(args: Array<String>)
+{  
+  var firstName: String? = "Rohan" 
+  var middleName: String? = null
+  var lastName : String? = "Sodhi"
+  
+  var firstlen:  Int = if (firstName != null) firstName.length else -1 
+  var middlelen:  Int = if (middleName != null) middleName.length else -1
+  var lastlen:  Int = if (lastName != null) lastName.length else -1
+   
+  println("Length of firstName is ${firstlen}")  
+  println("Length of middleName is ${middlelen}")
+  println("Length of lastName is ${lastlen}")
+}  
+
+// Part-2 (using elvis operator)
+fun main(args: Array<String>)
+{  
+  var firstName: String? = "Rohan" 
+  var middleName: String? = null
+  var lastName : String? = "Sodhi"
+  
+  var firstlen:  Int =  firstName ?.length ?: -1 
+  var middlelen:  Int = middleName ?.length ?: -1
+  var lastlen:  Int = lastName ?. length ?: -1
+   
+  println("Length of firstName is ${firstlen}")  
+  println("Length of middleName is ${middlelen}")
+  println("Length of lastName is ${lastlen}")
+}  
+```
+
+
+
 
