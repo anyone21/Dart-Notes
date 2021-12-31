@@ -46,4 +46,13 @@ fun main() {
 }
 ```
 
-
+### Challenge
+```kotlin
+fun main(){
+  // 1
+  // valid statments
+  var name: String? = "Ray"
+  var middleName: String? = null
+  
+  //2
+  
