@@ -20,3 +20,30 @@ fun main(){
  ### Checking for Null:
  It’s all well and good that nullables exist, but you may be wondering how you can
 look inside the box and manipulate the value it contains.
+
+
+
+### Mini-Exercise:
+```kotlin
+//1
+fun main() {
+  val myFavoriteSong: String? = null
+  if(myFavoriteSong!=null){
+    println("My Favroite songs is: $myFavoriteSong!!.")
+  }else{
+    println("I don’t have a favorite song.")
+  }
+}
+
+//2
+fun main() {
+  val myFavoriteSong: String? = null
+  if(myFavoriteSong!=null){
+    myFavriteSong = null
+  }else{
+    myFavriteSong = "The song"
+  }
+}
+```
+
+
