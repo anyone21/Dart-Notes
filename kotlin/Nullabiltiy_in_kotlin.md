@@ -166,7 +166,7 @@ fun main(){
 }
 ```
 
-### Elvis operator
+### Elvis operator(?:)
 
 This is also an another way to get a value from a nullable. It is used to return the not null value even the conditional expression is null. It is also used to check the null safety of values. consider following scripts to get a clear view of this operator.
 
