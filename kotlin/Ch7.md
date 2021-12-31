@@ -55,4 +55,21 @@ fun main(){
   var middleName: String? = null
   
   //2
-  
+  fun divideIfWhole(value:Int,divisor:Int):Int?{
+    return if(value%divisor==0){
+        value/divisor
+    }else{
+        null
+    }
+}
+
+fun main(){
+     val answer1 = divideIfWhole(10, 2) ?: 0
+  println("It divides $answer1 times.")
+
+  val answer2 = divideIfWhole(10, 3) ?: 0
+  println("It divides $answer2 times.")
+	    
+}
+```
+
