@@ -17,5 +17,10 @@ coordinate and collaborate in a rational decision making process.
 
 ### Centralized vs Decentralized vs Distributed
 
-* Decentralized
+* **Decentralized: ** Multiple points of coordination.
+* **Distributed: ** Everyone collectively execute the job.
+<p>
+  
+![image](https://user-images.githubusercontent.com/32765126/147952924-dd50bf96-32b0-4dda-a203-6ec1b46da42d.png)
 
+</p>
