@@ -64,3 +64,9 @@ coordinate and collaborate in a rational decision making process.
 
 ## The fundamentals
 
+### Cryptographically Secured Hash functions
+* **Hash Functions:** Map any sized data to a fixed size; Example H(x) = x%n where x and n are integers and % is the modular (remainder after dicsion by n) operations. x can be of any arbitrary length, but H(x) is within the range [0,n-1].
+* **Cryptographically Secured**
+  * One way, given a x, we can compute H(x), but given a H(x), no deterministic algorithm can compute x.
+  * For two different x<sub>1</sub>, and x<sub>2</sub>, H(x<sub>1</sub>) and H(x<sub>2</sub>) should be different.
+  *  
