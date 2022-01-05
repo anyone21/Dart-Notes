@@ -69,4 +69,5 @@ coordinate and collaborate in a rational decision making process.
 * **Cryptographically Secured**
   * One way, given a x, we can compute H(x), but given a H(x), no deterministic algorithm can compute x.
   * For two different x<sub>1</sub>, and x<sub>2</sub>, H(x<sub>1</sub>) and H(x<sub>2</sub>) should be different.
-  *  
+
+
